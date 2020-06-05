@@ -40,23 +40,28 @@ input#name:focus {
     background-color: rgba(251, 253, 245, 0.2);
 }
 
-input[type=submit], button {
+input[type=submit], button#again {
     font-size: 1.7rem;
 }
 
 #joke {
     display: none;
-    width: 50%;
+    width: 25%;
     position: fixed;
     background-color: rgb(206, 48, 0);
     border-radius: 20px;
     color: white;
-    left: 20px;
+    right: 20px;
     bottom: 20px;
     padding: 24px;
     -webkit-box-shadow: 9px 10px 29px -8px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 9px 10px 29px -8px rgba(0, 0, 0, 0.75);
     box-shadow: 9px 10px 29px -8px rgba(0, 0, 0, 0.75);
+    transition: all 0.5s;
+}
+
+#joke:hover {
+    transform: rotate(20deg);
 }
 
 #person-img {

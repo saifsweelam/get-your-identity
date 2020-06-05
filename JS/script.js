@@ -110,7 +110,7 @@ function formCallback(e) {
             </div>
         </div>
         <div class="h4 p-4 text-center"><span style="font-weight: bold;">Fact: </span>${fact}</div>
-        <button class="d-block ml-auto mr-auto btn btn-white btn-light mt-4 w-50" onclick="getForm();">Try Again</button>
+        <button id="again" class="d-block ml-auto mr-auto btn btn-white btn-light mt-4 w-50" onclick="getForm();">Try Again</button>
         `
     })
 }
