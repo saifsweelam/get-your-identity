@@ -12,6 +12,21 @@ const formHTML = `
 </form>
 `
 
+const funnyFacts = [
+    'Has a lot of friends from the opposite sex',
+    'As lazy as a lobster',
+    'Eats all the time',
+    'Loves to hug people',
+    'Good at sports',
+    'Never spoke to someone from the opposite sex',
+    'Doesn\'t stop laughing',
+    'Has a lot of money',
+    'Spends a lot of money',
+    'Unlucky',
+    'Never leaves home'
+]
+
+
 function getForm() {
     document.querySelector('#content').innerHTML = formHTML;
     document.forms.item(0).addEventListener('submit', formCallback)
@@ -80,6 +95,7 @@ function formCallback(e) {
             })
         })
     }).then(result => {
+        let fact = funnyFacts[Math.floor(Math.random() * funnyFacts.length)];
         document.querySelector('#content').innerHTML = `
         <div class="d-flex text-center align-items-center">
             <div class="h4 w-50">
@@ -93,6 +109,7 @@ function formCallback(e) {
                 <img src="${result.image}" alt="A randomly requested image." id="person-img">
             </div>
         </div>
+        <div class="h4 p-4 text-center"><span style="font-weight: bold;">Fact: </span>${fact}</div>
         <button class="d-block ml-auto mr-auto btn btn-white btn-light mt-4 w-50" onclick="getForm();">Try Again</button>
         `
     })
